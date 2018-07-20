@@ -60,9 +60,6 @@ ECPair.fromPublicKeyBuffer = function (buffer, network) {
 ECPair.fromWIF = function (string, network) {
     var decoded = wif.decode(string)
     var version = decoded.version
-
-    // list of networks?
-    console.log("types.Array>>>>",types.Array.toString())
     if (types.Array(network)) {
         network = network.filter(function (x) {
             return version === x.wif
